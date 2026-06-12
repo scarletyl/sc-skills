@@ -18,14 +18,14 @@ DEFAULT_ACCENT = "#077ba9"
 DEFAULT_LEAD_ACCENT = "#2bb9a6"
 
 STYLES = {
-    "p": f"font-family: {FONT}; font-size: 16px; color: #3f3f3f; line-height: 1.8; letter-spacing: 0.5px; margin: 0 0 20px 0; text-align: justify; text-justify: inter-ideograph;",
-    "h1": f"font-family: {FONT}; font-size: 17.6px; font-weight: bold; color: {DEFAULT_ACCENT}; line-height: 1.45; margin: 42px 0 28px 0; text-align: left; letter-spacing: 1px;",
+    "p": f"font-family: {FONT}; font-size: 16px; color: #3f3f3f; line-height: 1.6; letter-spacing: 0; margin: 0 0 20px 0; text-align: justify; text-justify: inter-ideograph;",
+    "h1": f"font-family: {FONT}; font-size: 18px; font-weight: bold; color: {DEFAULT_ACCENT}; line-height: 1.45; margin: 28px 0 28px 0; text-align: left; letter-spacing: 1px;",
     "h2": f"font-family: {FONT}; font-size: 17px; font-weight: bold; color: {DEFAULT_ACCENT}; line-height: 1.4; margin: 32px 0 16px 0; padding-left: 12px; border-left: 4px solid {DEFAULT_ACCENT}; letter-spacing: 1px;",
     "h3": f"font-family: {FONT}; font-size: 16px; font-weight: bold; color: {DEFAULT_ACCENT}; line-height: 1.4; margin: 24px 0 12px 0; letter-spacing: 1px;",
-    "lead_section": f"font-family: {FONT}; margin: 0 0 32px 0; padding: 0;",
-    "lead_label": f"font-family: {FONT}; font-size: 17.6px; font-weight: bold; color: {DEFAULT_LEAD_ACCENT}; line-height: 1.4; letter-spacing: 1px; margin: 0;",
+    "lead_section": f"font-family: {FONT}; margin: 0 0 28px 0; padding: 0;",
+    "lead_label": f"font-family: {FONT}; font-size: 18px; font-weight: bold; color: {DEFAULT_LEAD_ACCENT}; line-height: 1.4; letter-spacing: 1px; margin: 0;",
     "lead_underline": f"width: 58px; border: none; border-top: 3px solid {DEFAULT_LEAD_ACCENT}; margin: 4px 0 18px 0;",
-    "lead_p": f"font-family: {FONT}; font-size: 16px; color: #8b8b8b; line-height: 1.8; letter-spacing: 0.5px; margin: 0 0 32px 0; text-align: justify; text-justify: inter-ideograph;",
+    "lead_p": f"font-family: {FONT}; font-size: 16px; color: #8b8b8b; line-height: 1.8; letter-spacing: 0.5px; margin: 0 0 28px 0; text-align: justify; text-justify: inter-ideograph;",
     "lead_divider": "border: none; border-top: 1px solid #d8d8d8; margin: 0;",
     "strong": f"font-weight: bold; color: {DEFAULT_ACCENT};",
     "em": "font-style: italic; color: #555555;",
@@ -35,8 +35,8 @@ STYLES = {
     "ul": "padding-left: 2em; margin: 0 0 20px 0;",
     "ul_li": f"font-family: {FONT}; font-size: 16px; color: #3f3f3f; line-height: 1.8; margin-bottom: 8px; list-style: disc; text-align: justify; text-justify: inter-ideograph;",
     "ol": "list-style: none; padding: 0; margin: 0 0 24px 0; counter-reset: item;",
-    "ol_li": f"font-family: {FONT}; background-color: #f8f9fa; border-radius: 8px; padding: 14px 18px; margin-bottom: 10px; font-size: 15px; color: #3f3f3f; line-height: 1.7; list-style: none; text-align: justify; text-justify: inter-ideograph;",
-    "num": f"display: inline-block; width: 24px; height: 24px; background-color: {DEFAULT_ACCENT}; color: #ffffff; border-radius: 50%; font-size: 13px; line-height: 24px; text-align: center; margin-right: 12px;",
+    "ol_li": f"font-family: {FONT}; padding: 0; margin-bottom: 10px; font-size: 15px; color: #3f3f3f; line-height: 1.7; list-style: none; text-align: justify; text-justify: inter-ideograph; overflow: hidden;",
+    "num": f"float: left; color: #3f3f3f; font-size: 16px; margin-right: 8px;",
     "inline_code": "font-family: Consolas, Monaco, 'Courier New', monospace; font-size: 14px; color: #e83e8c; background-color: #f5f5f5; padding: 2px 6px; border-radius: 4px;",
     "code_outer": f"margin: 18px 0 24px 0; background-color: #1E1E1E; border-radius: 12px; box-shadow: 0 12px 24px rgba(0,0,0,0.22); overflow: hidden; font-family: {MONO};",
     "code_bar": "height: 36px; padding-left: 14px; background-color: #1E1E1E; line-height: 36px;",
@@ -210,7 +210,6 @@ def lead_block(text: str, mode: str) -> str:
         f'<p style="{STYLES["lead_label"]}">导读</p>'
         f'<hr style="{STYLES["lead_underline"]}" />'
         f'<p style="{STYLES["lead_p"]}">{render_inline(text.strip(), mode)}</p>'
-        f'<hr style="{STYLES["lead_divider"]}" />'
         '</section>'
     )
 

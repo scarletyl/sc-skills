@@ -11,7 +11,7 @@ font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'PingFang SC',
 ## Paragraph
 
 ```css
-font-size: 16px; color: #3f3f3f; line-height: 1.8; letter-spacing: 0.5px; margin: 0 0 20px 0; text-align: justify; text-justify: inter-ideograph;
+font-size: 16px; color: #3f3f3f; line-height: 1.6; letter-spacing: 0; margin: 0 0 20px 0; text-align: justify; text-justify: inter-ideograph;
 ```
 
 ## Level-One Title
@@ -19,7 +19,7 @@ font-size: 16px; color: #3f3f3f; line-height: 1.8; letter-spacing: 0.5px; margin
 Use for Markdown `#`.
 
 ```css
-font-size: 17.6px; font-weight: bold; color: #077ba9; line-height: 1.45; margin: 42px 0 28px 0; text-align: left; letter-spacing: 1px;
+font-size: 18px; font-weight: bold; color: #077ba9; line-height: 1.45; margin: 28px 0 28px 0; text-align: left; letter-spacing: 1px;
 ```
 
 ## Section Title
@@ -45,13 +45,13 @@ Use for `导读：...` at the beginning of an article, or when the formatter is 
 Outer `<section>`:
 
 ```css
-font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'PingFang SC', 'Microsoft YaHei', sans-serif; margin: 0 0 32px 0; padding: 0;
+font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'PingFang SC', 'Microsoft YaHei', sans-serif; margin: 0 0 28px 0; padding: 0;
 ```
 
 Label `<p>`:
 
 ```css
-font-size: 17.6px; font-weight: bold; color: <accent-color>; line-height: 1.4; letter-spacing: 1px; margin: 0;
+font-size: 18px; font-weight: bold; color: <accent-color>; line-height: 1.4; letter-spacing: 1px; margin: 0;
 ```
 
 Underline `<hr>`:
@@ -63,13 +63,7 @@ width: 58px; border: none; border-top: 3px solid <accent-color>; margin: 4px 0 1
 Lead paragraph `<p>`:
 
 ```css
-font-size: 16px; color: #8b8b8b; line-height: 1.8; letter-spacing: 0.5px; margin: 0 0 32px 0; text-align: justify; text-justify: inter-ideograph;
-```
-
-Bottom divider `<hr>`:
-
-```css
-border: none; border-top: 1px solid #d8d8d8; margin: 0;
+font-size: 16px; color: #8b8b8b; line-height: 1.8; letter-spacing: 0.5px; margin: 0 0 28px 0; text-align: justify; text-justify: inter-ideograph;
 ```
 
 ## Strong
@@ -129,13 +123,13 @@ list-style: none; padding: 0; margin: 0 0 24px 0; counter-reset: item;
 `<li>`:
 
 ```css
-background-color: #f8f9fa; border-radius: 8px; padding: 14px 18px; margin-bottom: 10px; font-size: 15px; color: #3f3f3f; line-height: 1.7; list-style: none; text-align: justify; text-justify: inter-ideograph;
+padding: 0; margin-bottom: 10px; font-size: 15px; color: #3f3f3f; line-height: 1.7; list-style: none; text-align: justify; text-justify: inter-ideograph; overflow: hidden;
 ```
 
 Leading number `<span>`:
 
 ```css
-display: inline-block; width: 24px; height: 24px; background-color: #077ba9; color: #ffffff; border-radius: 50%; font-size: 13px; line-height: 24px; text-align: center; margin-right: 12px;
+float: left; color: #3f3f3f; font-size: 16px; margin-right: 8px;
 ```
 
 ## Inline Code

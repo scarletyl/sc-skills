@@ -16,7 +16,7 @@ Convert user-provided article content into a WeChat Official Account HTML fragme
 - Use media mode only when the user explicitly wants images or live links preserved. Media mode additionally allows `<img>` and `<a>`.
 - Do not set fixed content widths such as `width: 600px` or `max-width: 600px`. Font size, margin, padding, borders, and icon dimensions may use px.
 - Body-like text should use justified alignment with `text-align: justify; text-justify: inter-ideograph;`. Do not justify headings, labels, code blocks, or attribution lines.
-- Heading text must use the article accent color, default `#077ba9`, unless the user explicitly requests another theme color. Level-one headings from Markdown `#` should use 17.6px size, bold weight, left alignment, and generous vertical spacing.
+- Heading text must use the article accent color, default `#077ba9`, unless the user explicitly requests another theme color. Level-one headings from Markdown `#` should use 18px size, bold weight, left alignment, and generous vertical spacing.
 - Escape user text before placing it into HTML.
 - Do not include HTML comments in final output.
 
@@ -56,7 +56,7 @@ For exact visual styles and element patterns, read `references/style-system.md` 
 ## Input Handling
 
 - Markdown: support headings, bold, italic, inline code, fenced code blocks, ordered and unordered lists, blockquotes, horizontal rules, links, and images.
-- Lead opening: when the source contains `导读：...` near the beginning, render it as a WeChat opening block with no top margin, an accent-colored `导读` label, a short accent `<hr>` underline directly beneath it, body-size gray lead text, and a bottom divider. Do not bold the lead paragraph.
+- Lead opening: when the source contains `导读：...` near the beginning, render it as a WeChat opening block with no top margin, an accent-colored `导读` label, a short accent `<hr>` underline directly beneath it, and body-size gray lead text. Do not bold the lead paragraph.
 - If the source does not contain a lead opening and the user has not asked to omit it, include a lead block. Prefer writing a concise agent-generated lead with `--lead`; if no `--lead` is passed, the formatter script will automatically add a basic lead from the first substantial paragraph, then fall back to the title, then to a generic lead. Use `--no-auto-lead` only when the user explicitly does not want a lead.
 - Keep lead opening colors coordinated with the whole article. Use `--accent-color` for the article theme color; use `--lead-accent-color` only when the lead needs a separate but compatible accent.
 - HTML: clean scripts, styles, classes, document wrappers, and unsupported tags; preserve semantic content where possible.
