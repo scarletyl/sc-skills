@@ -1,0 +1,8 @@
+interface:
+  display_name: "WeChat Formatter"
+  short_description: "Generate WeChat-ready inline HTML"
+  brand_color: "#007AFF"
+  default_prompt: "Use $wechat-formatter to convert this article into WeChat Official Account-ready HTML."
+
+policy:
+  allow_implicit_invocation: true
